@@ -52,11 +52,8 @@ function playRound(humanChoice, computerChoice) {
         console.log(`You Win! Scissors beats Paper! You: ${humanScore} Computer: ${computerScore}`)
     } 
 }
-playRound()
-playRound()
-playRound()
-playRound()
-playRound()
+for (i=0; i<5; i++) {
+playRound() }
 if (humanScore > computerScore) {
     console.log(`You are the winner! You beat the computer by ${humanScore - computerScore} points!`)
 } else if (humanScore < computerScore) {
