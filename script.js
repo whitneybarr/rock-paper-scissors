@@ -65,3 +65,11 @@ rpsChoices.addEventListener("click", (e) => {
     }  
     }
 });
+
+/*
+TO DO: 
+Flesh out UI and make it **Pretty**
+Separate score counter from "blank beats blank"
+Images to represent human and computer choices
+final image to represent winner?
+*/
