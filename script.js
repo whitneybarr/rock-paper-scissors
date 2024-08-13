@@ -68,13 +68,6 @@ function playRound(humanChoice, computerChoice) {
     gameCard.insertBefore(scoreBanner,chooseWeapon)
     gameCard.insertBefore(battleSpace, chooseWeapon)
     gameCard.insertBefore(battleText, chooseWeapon)
-    if (round === 9) {
-        roundBanner.textContent = `Final Round`
-    }  else if (round === 10) {
-        endScreen()
-    } else {
-        roundBanner.textContent= `Round: ${round}`
-    }
     if (humanChoice === computerChoice) {
         battleText.textContent = `Tie! No winner this round.`
     } else if (humanChoice === "rock" && computerChoice === "paper") {
@@ -96,10 +89,16 @@ function playRound(humanChoice, computerChoice) {
         ++humanScore
         battleText.textContent = `Scissors beats Paper!`
     } 
+    if (round === 9) {
+        roundBanner.textContent = `Final Round`
+    }  else if (round === 10) {
+        endScreen()
+    } else {
+        roundBanner.textContent= `Round: ${round}`
+    }
     ++round
     hDisplayScore.innerText = `You: ${humanScore}`;
     cDisplayScore.innerText = `Computer: ${computerScore}`
-    // roundBanner.innerText = `Round: ${round}`
 }
 let hRockImg = document.createElement("img")
 hRockImg.setAttribute("src", "images/humRock.png")
